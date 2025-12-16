@@ -69,7 +69,7 @@
       {"name":"Category","type":"string","maxLength":500},
       {"name":"Purchase Amount (USD)","type":"string","maxLength":500},
       {"name":"Location","type":"string","maxLength":500},
-      {"name":"Size","type":"string","maxLength":500},
+      {"name":"Size","type":"string","meaning":"Text","maxLength":500},
       {"name":"Color","type":"string","maxLength":500},
       {"name":"Season","type":"string","maxLength":500},
       {"name":"Review Rating","type":"string","maxLength":500},
