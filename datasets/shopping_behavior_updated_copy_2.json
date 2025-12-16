@@ -1,0 +1,168 @@
+{
+  "type": "MySQL",
+  "managed": true,
+  "featureGroup": false,
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT",
+    "ignoreErrorStatusOnBuild": false
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "adrian.negron@dataiku.com"
+    },
+    "lastModifiedOn": 1765922795224
+  },
+  "tags": [],
+  "params": {
+    "useDatetimeForDates": false,
+    "connection": "mariaDB",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${NODE_DC}_${projectKey}_shopping_behavior_updated_copy_2",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeDescriptionsAsSQLComment": true,
+    "noDropOnSchemaMismatch": true,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "datetimenotzReadMode": "AS_IS",
+    "dateonlyReadMode": "AS_IS",
+    "variablesExpansionLoopConfig": {
+      "enabled": false,
+      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
+      "replacements": []
+    },
+    "sparkJdbcAccess": "NONE",
+    "numPartitions": -1
+  },
+  "schema": {
+    "columns": [
+      {"name":"Customer ID","type":"string","maxLength":500},
+      {"name":"Age","type":"string","maxLength":500},
+      {"name":"Gender","type":"string","maxLength":500},
+      {"name":"Item Purchased","type":"string","maxLength":500},
+      {"name":"Category","type":"string","maxLength":500},
+      {"name":"Purchase Amount (USD)","type":"string","maxLength":500},
+      {"name":"Location","type":"string","maxLength":500},
+      {"name":"Size","type":"string","maxLength":500},
+      {"name":"Color","type":"string","maxLength":500},
+      {"name":"Season","type":"string","maxLength":500},
+      {"name":"Review Rating","type":"string","maxLength":500},
+      {"name":"Subscription Status","type":"string","maxLength":500},
+      {"name":"Shipping Type","type":"string","maxLength":500},
+      {"name":"Discount Applied","type":"string","maxLength":500},
+      {"name":"Promo Code Used","type":"string","maxLength":500},
+      {"name":"Previous Purchases","type":"string","maxLength":500},
+      {"name":"Payment Method","type":"string","maxLength":500},
+      {"name":"Frequency of Purchases","type":"string","maxLength":500}
+    ],
+    "userModified": true
+  },
+  "typeSystemVersion": "V2",
+  "dkuProperties": [],
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "monitor": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {}
+}
