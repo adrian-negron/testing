@@ -2,6 +2,7 @@
   "type": "S3",
   "managed": false,
   "featureGroup": false,
+  "formatType": "csv",
   "checklists": {
     "checklists": []
   },
@@ -23,6 +24,37 @@
       "enabled": false,
       "rules": []
     }
+  },
+  "formatParams": {
+    "style": "excel",
+    "charset": "utf-8",
+    "separator": ",",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "maxRowChars": 100000000,
+    "dateSerializationFormat": "ISO",
+    "arrayMapFormat": "json",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": true,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 5,
+    "normalizeBooleans": false,
+    "normalizeDoubles": true,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": ""
   },
   "partitioning": {
     "ignoreNonMatchingFile": false,
@@ -55,7 +87,13 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {"name":"ID","type":"string"},
+      {"name":"Name","type":"string"},
+      {"name":"Age","type":"string"},
+      {"name":"Department","type":"string"},
+      {"name":"Salary","type":"string"}
+    ],
     "userModified": true
   },
   "typeSystemVersion": "V2",
