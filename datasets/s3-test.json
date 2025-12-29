@@ -40,7 +40,7 @@
   "params": {
     "metastoreSynchronizationEnabled": true,
     "connection": "test-s3",
-    "path": "/",
+    "path": "/dummy_data.csv",
     "notReadyIfEmpty": false,
     "filesSelectionRules": {
       "mode": "ALL",
