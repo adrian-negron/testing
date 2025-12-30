@@ -68,7 +68,9 @@
     },
     "lastModifiedOn": 1765918297718
   },
-  "tags": [],
+  "tags": [
+    "testing:test"
+  ],
   "params": {
     "uploadFSProviderType": "S3",
     "uploadedConfig": {
