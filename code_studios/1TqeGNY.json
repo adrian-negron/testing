@@ -1,0 +1,19 @@
+{
+  "name": "testing",
+  "libName": "testing",
+  "templateId": "test",
+  "params": {},
+  "owner": "adrian.negron@dataiku.com",
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "adrian.negron@dataiku.com"
+    },
+    "lastModifiedOn": 1767120148159
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
