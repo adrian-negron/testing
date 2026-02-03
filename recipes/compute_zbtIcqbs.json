@@ -4,8 +4,9 @@
   "params": {
     "clearOutputPartition": false,
     "exportParams": {
-      "destinationType": "DOWNLOAD",
+      "destinationType": "CUSTOM_MANAGED",
       "temporaryFileBehavior": "AUTO",
+      "originatingOptionId": "python-both-auth-6c1d5d42c496b352ff162bfec7d663c0",
       "format": {
         "type": "csv",
         "params": {
@@ -39,7 +40,21 @@
           "compress": ""
         }
       },
+      "destinationDatasetProjectKey": "TEST",
       "overwriteDestinationDataset": false,
+      "exporterType": "exporter_microsoft-power-bi-v2_python-both-auth",
+      "config": {
+        "authentication_method": "oauth",
+        "export_method": "new_dataset",
+        "buffer_size": 100,
+        "workspace": "",
+        "powerbi_connection": {
+          "mode": "NONE"
+        },
+        "basic_connection": {
+          "mode": "NONE"
+        }
+      },
       "applyExplorationFilters": false,
       "applyColoring": false,
       "selection": {
@@ -49,13 +64,14 @@
           "enabled": false
         },
         "partitionSelectionMethod": "ALL",
+        "selectedPartitions": [],
         "latestPartitionsN": 1,
         "ordering": {
           "enabled": false,
           "rules": []
         },
         "samplingMethod": "FULL",
-        "maxRecords": -1,
+        "maxRecords": 100000,
         "targetRatio": 0.02,
         "ascending": true,
         "withinFirstN": -1,
