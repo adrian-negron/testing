@@ -75,7 +75,7 @@
     "main": {
       "items": [
         {
-          "ref": "shopping_behavior_updated_copy_2",
+          "ref": "s3_shopping",
           "appendMode": false
         }
       ]
