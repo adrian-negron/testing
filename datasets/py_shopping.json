@@ -92,8 +92,13 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"Category","type":"string"},
+      {"name":"Avg_Review_Rating","type":"double"},
+      {"name":"Total_Sales_USD","type":"bigint"},
+      {"name":"Customer_Count","type":"bigint"}
+    ],
+    "userModified": false
   },
   "typeSystemVersion": "V2",
   "dkuProperties": [],
