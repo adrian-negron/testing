@@ -3,7 +3,8 @@
   "neverRecomputeExistingPartitions": false,
   "params": {
     "envSelection": {
-      "envMode": "INHERIT"
+      "envMode": "USE_BUILTIN_MODE",
+      "envName": "INTERNAL_huggingface_local_v1"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
