@@ -92,7 +92,26 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {"name":"Customer ID","type":"string"},
+      {"name":"Age","type":"string"},
+      {"name":"Gender","type":"string"},
+      {"name":"Item Purchased","type":"string"},
+      {"name":"Category","type":"string"},
+      {"name":"Purchase Amount (USD)","type":"string"},
+      {"name":"Location","type":"string"},
+      {"name":"Size","type":"string"},
+      {"name":"Color","type":"string"},
+      {"name":"Season","type":"string"},
+      {"name":"Review Rating","type":"string"},
+      {"name":"Subscription Status","type":"string"},
+      {"name":"Shipping Type","type":"string"},
+      {"name":"Discount Applied","type":"string"},
+      {"name":"Promo Code Used","type":"string"},
+      {"name":"Previous Purchases","type":"string"},
+      {"name":"Payment Method","type":"string"},
+      {"name":"Frequency of Purchases","type":"string"}
+    ],
     "userModified": true
   },
   "typeSystemVersion": "V2",
