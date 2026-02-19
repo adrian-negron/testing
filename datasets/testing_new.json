@@ -60,7 +60,11 @@
     "numPartitions": -1
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {"name":"ID","type":"bigint","originalType":"NUMBER"},
+      {"name":"NAME","type":"string","originalType":"VARCHAR","maxLength":16777216},
+      {"name":"CREATED_AT","type":"datetimenotz","originalType":"TIMESTAMPNTZ"}
+    ],
     "userModified": true
   },
   "typeSystemVersion": "V2",
