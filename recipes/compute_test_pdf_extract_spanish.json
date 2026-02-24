@@ -2,7 +2,11 @@
   "type": "CustomCode_text-extraction",
   "neverRecomputeExistingPartitions": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "extract_chunks": false,
+      "use_pdf_bookmarks": true,
+      "metadata_as_plain_text": false
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
