@@ -9,7 +9,8 @@
       "language_easyocr": "es"
     },
     "containerSelection": {
-      "containerMode": "INHERIT"
+      "containerMode": "EXPLICIT_CONTAINER",
+      "containerConf": "CPU-L-1-cpu-8Gb-Ram"
     }
   },
   "customMeta": {
