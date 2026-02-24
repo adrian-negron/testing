@@ -2,7 +2,11 @@
   "type": "CustomCode_image-conversion",
   "neverRecomputeExistingPartitions": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "advanced_parameters": false,
+      "dpi": 200,
+      "quality": 75
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
