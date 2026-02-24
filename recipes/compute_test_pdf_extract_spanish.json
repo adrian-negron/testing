@@ -3,8 +3,8 @@
   "neverRecomputeExistingPartitions": false,
   "params": {
     "customConfig": {
-      "extract_chunks": false,
-      "use_pdf_bookmarks": true,
+      "extract_chunks": true,
+      "use_pdf_bookmarks": false,
       "metadata_as_plain_text": false
     },
     "containerSelection": {
