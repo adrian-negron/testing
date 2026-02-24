@@ -4,8 +4,8 @@
   "params": {
     "customConfig": {
       "extract_chunks": true,
-      "use_pdf_bookmarks": true,
-      "metadata_as_plain_text": true
+      "use_pdf_bookmarks": false,
+      "metadata_as_plain_text": false
     },
     "containerSelection": {
       "containerMode": "EXPLICIT_CONTAINER",
