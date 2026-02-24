@@ -95,6 +95,8 @@
     "columns": [
       {"name":"file","type":"string"},
       {"name":"text","type":"string"},
+      {"name":"chunk_id","type":"bigint"},
+      {"name":"metadata","type":"string"},
       {"name":"error_message","type":"string"}
     ],
     "userModified": false
