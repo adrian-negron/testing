@@ -3,7 +3,7 @@
   "neverRecomputeExistingPartitions": false,
   "params": {
     "customConfig": {
-      "recombine_pdf": false,
+      "recombine_pdf": true,
       "ocr_engine": "tesseract",
       "advanced_parameters": false,
       "language": "spa"
