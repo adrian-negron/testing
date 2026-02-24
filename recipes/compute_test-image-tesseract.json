@@ -2,7 +2,12 @@
   "type": "CustomCode_ocr-text-extraction-dataset",
   "neverRecomputeExistingPartitions": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "recombine_pdf": false,
+      "ocr_engine": "tesseract",
+      "advanced_parameters": true,
+      "language": "spa"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
