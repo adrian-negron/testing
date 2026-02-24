@@ -5,7 +5,7 @@
     "customConfig": {
       "recombine_pdf": false,
       "ocr_engine": "tesseract",
-      "advanced_parameters": true,
+      "advanced_parameters": false,
       "language": "spa"
     },
     "containerSelection": {
