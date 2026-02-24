@@ -8,7 +8,8 @@
       "metadata_as_plain_text": false
     },
     "containerSelection": {
-      "containerMode": "INHERIT"
+      "containerMode": "EXPLICIT_CONTAINER",
+      "containerConf": "CPU-M-1-cpu-4Gb-Ram"
     }
   },
   "customMeta": {
