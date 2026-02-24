@@ -4,8 +4,9 @@
   "params": {
     "customConfig": {
       "recombine_pdf": false,
-      "ocr_engine": "default",
-      "advanced_parameters": false
+      "ocr_engine": "easyocr",
+      "advanced_parameters": true,
+      "language_easyocr": "es"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
