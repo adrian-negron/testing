@@ -92,8 +92,12 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"file","type":"string"},
+      {"name":"text","type":"string"},
+      {"name":"error_message","type":"string"}
+    ],
+    "userModified": false
   },
   "typeSystemVersion": "V2",
   "dkuProperties": [],
