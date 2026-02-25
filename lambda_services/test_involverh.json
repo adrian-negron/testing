@@ -40,7 +40,7 @@
       ],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "import dataiku\nimport pandas as pd\n\n# Initialization code (runs once when the API starts)\n# You can pre-load models or reference datasets here for speed\ndataset \u003d dataiku.Dataset(\"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\")\n\ndef api_py_function(customer_id):\n    \"\"\"\n    Retrieves data from the DB and returns it in a custom format.\n    \"\"\"\n    # Use the SQL executor to fetch only the required row\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # We use double quotes for the table/column as confirmed by your previous errors\n    query \u003d f\u0027SELECT * FROM \"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\" WHERE \"Customer ID\" \u003d \\\u0027{customer_id}\\\u0027\u0027\n    \n    df \u003d executor.query_to_df(query)\n    \n    if df.empty:\n        return f\"Error: Customer {customer_id} not found\"\n\n    # CUSTOM OUTPUT STRUCTURE EXAMPLES:\n    # Example A: Return a simple pipe-delimited string instead of JSON\n    row \u003d df.iloc[0]\n    custom_string \u003d f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"\n    \n    return custom_string\n",
+      "code": "import dataiku\nimport pandas as pd\n\n# Initialization code (runs once when the API starts)\n# You can pre-load models or reference datasets here for speed\ndataset \u003d dataiku.Dataset(\"TEST.node-d40e9b1c_shopping_behavior_involverh_copy_TEST\")\n\ndef api_py_function(customer_id):\n    \"\"\"\n    Retrieves data from the DB and returns it in a custom format.\n    \"\"\"\n    # Use the SQL executor to fetch only the required row\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # We use double quotes for the table/column as confirmed by your previous errors\n    query \u003d f\u0027SELECT * FROM \"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\" WHERE \"Customer ID\" \u003d \\\u0027{customer_id}\\\u0027\u0027\n    \n    df \u003d executor.query_to_df(query)\n    \n    if df.empty:\n        return f\"Error: Customer {customer_id} not found\"\n\n    # CUSTOM OUTPUT STRUCTURE EXAMPLES:\n    # Example A: Return a simple pipe-delimited string instead of JSON\n    row \u003d df.iloc[0]\n    custom_string \u003d f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"\n    \n    return custom_string\n",
       "id": "get-customer-details-python",
       "type": "PY_FUNCTION",
       "tags": [],
@@ -59,7 +59,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:MQn3InANDFsFSHfgufGjn899PvTyzWO5JQ3J11TdADfEhQpRVljQvLOnO87gMr2pGb3Jj15FeWqqsHrNQ2vkXX+I2NhDCtQZMnP85nTS4ag\u003d",
+        "key": "e:AES:X2:Nkro509G5J3A0t1yHbZhMoTtAyc08ZVxYqhA6SYGXl5xQI4yg38NNPpQN8HiH5yrIthIdERAGmV/GNeNHtlTAyvFgdgWj7CI2T4WLB4OUBU\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
