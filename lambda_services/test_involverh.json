@@ -29,7 +29,7 @@
         "envMode": "INHERIT",
         "envName": null
       },
-      "hasCustomResponse": false,
+      "hasCustomResponse": true,
       "testQueries": [
         {
           "name": "Query #1",
@@ -59,7 +59,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:Nkro509G5J3A0t1yHbZhMoTtAyc08ZVxYqhA6SYGXl5xQI4yg38NNPpQN8HiH5yrIthIdERAGmV/GNeNHtlTAyvFgdgWj7CI2T4WLB4OUBU\u003d",
+        "key": "e:AES:X2:erKPyXC1bhQUf9DyeZeUxwIx7IotCG0Wlyf1XB7o3Tbxi/frOS58JZ9Luk9kE5rHHSl2xMmobex0OumZkAdHzEGxaIFq1UBUbzECOdEOpMY\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
