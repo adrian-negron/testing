@@ -12,14 +12,7 @@
           "maxResults": -1
         }
       ],
-      "testQueries": [
-        {
-          "name": "Query #1",
-          "q": {
-            "Customer ID": 1
-          }
-        }
-      ],
+      "testQueries": [],
       "id": "get-customer-details",
       "type": "SQL_QUERY",
       "tags": [],
@@ -59,7 +52,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:98jRLm0Fz/UQu/KHLLi0udO4RMyZp6VcHJtvOh8Ju90uXICTZfQY3vuOd7rlUhRpFDygeV3eSLNvYl+P0HtPt+Uub1manT4+Lqkjoj9zd1k\u003d",
+        "key": "e:AES:X2:c77QDfpSlZ8DlNl3w919Po0n/+DwJbbrAvz3SLxMpmFW5lUE17r/NHg8FV6O1rjV+PGOCTvgREAUjJlpY4KioJ6rVvkI9SG9Y9brylHFFHY\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
