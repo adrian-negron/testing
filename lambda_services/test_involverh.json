@@ -40,7 +40,7 @@
         "envMode": "INHERIT",
         "envName": null
       },
-      "hasCustomResponse": true,
+      "hasCustomResponse": false,
       "testQueries": [
         {
           "name": "Query #1",
@@ -70,7 +70,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:UmqnKnlDHxjziz5F7frFRwS74AxZllzm7wGHTzbxHqoAHz97gA5/PDfhLUfLsjDCWMBc0rOCo3CeQc4xXo//FyDWpJC5Rfiyk3GDF7Crs4E\u003d",
+        "key": "e:AES:X2:x9px8RxlfjBL0eLKcggJ5sUo1QTitjb7++fp4Xhfa/uTKZzHXsbCGbKJJZtOoOj9yrhUviOYNvXZK6BAMWNYXuDvY+Lr8EwnSRQ9erC1U7k\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -78,7 +78,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:L/PJPLz0GvAhkP2sO7bh5DXoUSzMkkwQzRgDnfkZ0oVOg1FD+GhNHJY8zijcyLoQ+K8hO0S5HoUExgRqSP/9LKIBIrP7eHkgrlyZDf3Dgi0\u003d",
+        "key": "e:AES:X2:8F0CJR1ydDJ7xlBAUorSEXozC35+ld5zWVWmgblb6jjNVNlOJRv+fH7xcX2bswIqZ0eMG51gSRSuPGMyoE/ES4h8XCWP6WUnzwCSVi5P5Lk\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
