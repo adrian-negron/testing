@@ -23,6 +23,27 @@
         "enabled": false,
         "isManual": true
       }
+    },
+    {
+      "envSelection": {
+        "envMode": "INHERIT",
+        "envName": null
+      },
+      "hasCustomResponse": false,
+      "testQueries": [],
+      "inputFolderRefs": [],
+      "userFunctionName": "api_py_function",
+      "code": "\n# Insert here initialization code\n\n# This function is the entry point for your Python function API\n# You can call this function with passing \"param1\", \"param2\",\n# \"param3\" as arguments to the API call\n# (see REST API documentation)\ndef api_py_function(param1, param2, param3):\n    return param1 + param2 * param3\n",
+      "id": "get-customer-details-python",
+      "type": "PY_FUNCTION",
+      "tags": [],
+      "openAPI": {
+        "title": "get-customer-details-python",
+        "content": "{\n  \"paths\" : {\n    \"/get-customer-details-python/run\" : {\n      \"post\" : {\n        \"summary\" : \"get-customer-details-python endpoint\",\n        \"description\" : \"Describe what the endpoint call does, what input it takes, what it returns ...\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"name\" : \"serviceInputPayload\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/get-customer-details-python_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/get-customer-details-python_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/get-customer-details-python_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"get-customer-details-python_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"stringPropExample\" : {\n          \"type\" : \"string\"\n        },\n        \"intPropExample\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"doublePropExample\" : {\n          \"type\" : \"number\",\n          \"format\" : \"double\"\n        },\n        \"boolPropExample\" : {\n          \"type\" : \"boolean\"\n        },\n        \"floatPropExample\" : {\n          \"type\" : \"number\",\n          \"format\" : \"float\"\n        }\n      }\n    },\n    \"get-customer-details-python_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"OutputPropExample\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"get-customer-details-python_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
+        "description": "",
+        "enabled": false,
+        "isManual": true
+      }
     }
   ],
   "authMethod": "API_KEYS",
@@ -31,7 +52,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:WaSNv5Fp3v1Apz69x8GMqRH9EevRb2BxuxUb+OUyeGVJa9UIrTWpUyrj4yB3YApn+nBfBQRENTyr8m9Bo8bnXhYwGDKJggeOAUrjngevtwE\u003d",
+        "key": "e:AES:X2:KmdN2pbAOkSGkdjMzhjL0j1j45FfIQ9J8BzqBJdUNaQhxbwEjTMV1h8ifBCrNaeOao+fuM8SIgAtl3uW4k1HG8z+M1ItKFxk1AsJ/EGMw5Y\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
