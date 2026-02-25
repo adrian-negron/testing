@@ -70,10 +70,18 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:2Ts0ZatDQud3qoKn7G4KSBtrl92LtvVCKK0hwatbAAIwaDyqMexmk/I1VXqhT+2uhLIcKqSqN3FipZt8qSidzfcmg0HoZky/02FU02SLAQY\u003d",
+        "key": "e:AES:X2:+7LVhpm5vxUtmd3z0BXZbqWCPAWaQCQq2tCoia7KLmVln4KtojDpIUUNb6woXxo1tBX71qZY+M9laKwAW70HZdmwuqpLJyZqYrsCmjY4Vgs\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
+        "createdBy": "adrian.negron@dataiku.com"
+      },
+      {
+        "id": null,
+        "key": "e:AES:X2:xCsK6hrSMgflaQJ4RmjAg+wXqF7LTNIOEq9jDmRSOS0nqiopIWw4WnbqDvIHzf4I6B0v74MFRZ15Ls7ZW/7lB1y3ZtO3SMtRBrckFzxbNSg\u003d",
+        "label": "other service",
+        "description": null,
+        "createdOn": 1772047935154,
         "createdBy": "adrian.negron@dataiku.com"
       }
     ]
