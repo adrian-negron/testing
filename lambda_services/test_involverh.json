@@ -1,14 +1,37 @@
 {
-  "name": null,
+  "name": "test_involverh",
   "error": null,
-  "endpoints": [],
+  "endpoints": [
+    {
+      "connection": null,
+      "queries": [
+        {
+          "inputParameters": [],
+          "query": "-- Insert your SQL code here",
+          "postCommit": false,
+          "maxResults": -1
+        }
+      ],
+      "testQueries": [],
+      "id": "get-customer-details",
+      "type": "SQL_QUERY",
+      "tags": [],
+      "openAPI": {
+        "title": "get-customer-details",
+        "content": "{\n  \"paths\" : {\n    \"/get-customer-details/query\" : {\n      \"post\" : {\n        \"summary\" : \"get-customer-details endpoint\",\n        \"description\" : \"Describe what the endpoint call does, what input it takes, what it returns ...\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"name\" : \"serviceInputPayload\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/get-customer-details_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/get-customer-details_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/get-customer-details_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"get-customer-details_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"features\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"stringPropExample\" : {\n              \"type\" : \"string\"\n            },\n            \"intPropExample\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"doublePropExample\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"boolPropExample\" : {\n              \"type\" : \"boolean\"\n            },\n            \"floatPropExample\" : {\n              \"type\" : \"number\",\n              \"format\" : \"float\"\n            }\n          }\n        }\n      }\n    },\n    \"get-customer-details_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"OutputPropExample\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"get-customer-details_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
+        "description": "",
+        "enabled": false,
+        "isManual": true
+      }
+    }
+  ],
   "authMethod": "API_KEYS",
   "authRealm": {
     "id": null,
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:7jHf80vlwZyI6fiG8LnZW8gPcglWruwSAEfhmuq4CVfaKuejoyzgAtdwBjwv5Po8DBTKudoVqRCMRAu22GAoPbWBYEgjeaoSnKfjou9oZmE\u003d",
+        "key": "e:AES:X2:WaSNv5Fp3v1Apz69x8GMqRH9EevRb2BxuxUb+OUyeGVJa9UIrTWpUyrj4yB3YApn+nBfBQRENTyr8m9Bo8bnXhYwGDKJggeOAUrjngevtwE\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
