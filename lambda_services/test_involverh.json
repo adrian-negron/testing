@@ -33,7 +33,7 @@
       "testQueries": [],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "\n# Insert here initialization code\n\n# This function is the entry point for your Python function API\n# You can call this function with passing \"param1\", \"param2\",\n# \"param3\" as arguments to the API call\n# (see REST API documentation)\ndef api_py_function(param1, param2, param3):\n    return param1 + param2 * param3\n",
+      "code": "import dataiku\nimport pandas as pd\n\n# Initialization code (runs once when the API starts)\n# You can pre-load models or reference datasets here for speed\ndataset \u003d dataiku.Dataset(\"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\")\n\ndef api_py_function(customer_id):\n    \"\"\"\n    Retrieves data from the DB and returns it in a custom format.\n    \"\"\"\n    # Use the SQL executor to fetch only the required row\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # We use double quotes for the table/column as confirmed by your previous errors\n    query \u003d f\u0027SELECT * FROM \"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\" WHERE \"Customer ID\" \u003d \\\u0027{customer_id}\\\u0027\u0027\n    \n    df \u003d executor.query_to_df(query)\n    \n    if df.empty:\n        return f\"Error: Customer {customer_id} not found\"\n\n    # CUSTOM OUTPUT STRUCTURE EXAMPLES:\n    # Example A: Return a simple pipe-delimited string instead of JSON\n    row \u003d df.iloc[0]\n    custom_string \u003d f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"\n    \n    return custom_string\n",
       "id": "get-customer-details-python",
       "type": "PY_FUNCTION",
       "tags": [],
@@ -52,7 +52,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:c77QDfpSlZ8DlNl3w919Po0n/+DwJbbrAvz3SLxMpmFW5lUE17r/NHg8FV6O1rjV+PGOCTvgREAUjJlpY4KioJ6rVvkI9SG9Y9brylHFFHY\u003d",
+        "key": "e:AES:X2:ZHWaSrUJHkq45/Z3DoROAHYtIgVLwrKe5Dkc89IANC8sosvaaWcDPyFw9xQ1CqzuSYTijys1G1fU5Wi6FzRwzDwSLUBZ9c0wGA+Jf7e13aY\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
