@@ -51,7 +51,7 @@
       ],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "import dataiku\nimport pandas as pd\n\n# Define the dataset using its Dataiku name and project key\n# \u0027TEST\u0027 is your project key; \u0027shopping_behavior_involveRH\u0027 is the dataset name\ndataset \u003d dataiku.Dataset(\"shopping_behavior_involveRH\", project_key\u003dNone)\n\ndef api_py_function(customer_id):\n    # Initialize the executor using the dataset\u0027s connection\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # Use the technical table name for the SQL query\n    table_name \u003d \"node_d40e9b1c_TEST_shopping_behavior_involverh\"\n    query \u003d f\"SELECT * FROM {table_name} WHERE `Customer ID` \u003d \u0027{customer_id}\u0027\"\n    \n    # Execute and return\n    df \u003d executor.query_to_df(query)\n    \n    if df.empty:\n        return f\"Customer {customer_id} not found\"\n\n    # Grab the first row\n    row \u003d df.iloc[0]\n    return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"",
+      "code": "import dataiku\nimport dataikuapi\nimport pandas as pd\n\n# Define the dataset using its Dataiku name and project key\n# \u0027TEST\u0027 is your project key; \u0027shopping_behavior_involveRH\u0027 is the dataset name\nclient \u003d dataikuapi.DSSClient(\"https://dss-d40e9b1c-44bac6d5-int2.gis-dataiker-1.getitstarted.dataiku.com\", \"khf9mi1AsOmomn1zKft2borxBMXdtccf\")\nproject \u003d client.get_project(\"TEST\")\ndataset \u003d dataiku.Dataset(\"shopping_behavior_involveRH\", project_key\u003dNone)\n\n\ndef api_py_function(customer_id):\n    # Initialize the executor using the dataset\u0027s connection\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # Use the technical table name for the SQL query\n    table_name \u003d \"node_d40e9b1c_TEST_shopping_behavior_involverh\"\n    query \u003d f\"SELECT * FROM {table_name} WHERE `Customer ID` \u003d \u0027{customer_id}\u0027\"\n    \n    # Execute and return\n    df \u003d executor.query_to_df(query)\n    \n    if df.empty:\n        return f\"Customer {customer_id} not found\"\n\n    # Grab the first row\n    row \u003d df.iloc[0]\n    return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"",
       "id": "get-customer-details-python",
       "type": "PY_FUNCTION",
       "tags": [],
@@ -70,7 +70,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:eisVNQQf7b4gisyuqyvXVtAt2EOIaZhYM/n2Dh21hzmTC5LgffafdJ8yjhSlCYui/113nL3DcIZfEnTc2YqfYYbvC/rlaSKG+PIDUnFfQio\u003d",
+        "key": "e:AES:X2:kjEOgZ2P7kbb5cl6V3kMEXkf5J5YCa9c/JWwPSGYAilh/tGdWqk6G4f07ZndyPiPP9p6R3JqDWCCKIrbKmv0jFaDXQL6wAgN3vE5gD4zROU\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -78,7 +78,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:I10udutAMDOupA3ou2eWX4m280pEh4YWy9wUVKgFKlLPGWo7RyuPGOB+B5ksgTbvD5CHjIu7LV7qpf/VuuA6GEv831MbsyV56k+bsMsdh5M\u003d",
+        "key": "e:AES:X2:g5/2HZsipruiAAWarnEJisUSz5GDcgI5YLwfIbhBu7d54vDBGR+BIfu0rf4RiXme2N4SY6S5UGUaIkblUR5vijtSIlpyNyKkS2Nl3kDSiTg\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
