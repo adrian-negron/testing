@@ -3,7 +3,7 @@
   "error": null,
   "endpoints": [
     {
-      "connection": null,
+      "connection": "api-node-referenced-data",
       "queries": [
         {
           "inputParameters": [],
@@ -52,7 +52,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:KmdN2pbAOkSGkdjMzhjL0j1j45FfIQ9J8BzqBJdUNaQhxbwEjTMV1h8ifBCrNaeOao+fuM8SIgAtl3uW4k1HG8z+M1ItKFxk1AsJ/EGMw5Y\u003d",
+        "key": "e:AES:X2:lGC4Ge7UoMHr79DPGeUZ9PCfzahffz3tbvTzRw0s4WkAvL/oFhdM5Xme7gPv7ERj4zcT2AXv8xGu1qTZoAI2aJz3xa/HwMZ1+/7wMlYDiJs\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
