@@ -51,7 +51,7 @@
       ],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "import dataiku\nimport pandas as pd\nimport os\n\n# FORCE the project key into the environment so SQLExecutor2 can find it\nos.environ[\"DKU_CURRENT_PROJECT_KEY\"] \u003d \"TEST\"\n\n# Now initialize your dataset using the explicit project key\ndataset \u003d dataiku.Dataset(\"shopping_behavior_involveRH\", project_key\u003d\"TEST\")\n\ndef api_py_function(customer_id):\n    \"\"\"\n    Retrieves data from the DB and returns it in a custom format.\n    \"\"\"\n    # Initialize the executor\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # Technical table name from your MySQL\n    table_name \u003d \"node_d40e9b1c_TEST_shopping_behavior_involverh\"\n    \n    # SQL Query - using backticks for MySQL column names with spaces\n    query \u003d f\"SELECT * FROM {table_name} WHERE `Customer ID` \u003d \u0027{customer_id}\u0027\"\n    \n    # This call was the one failing because it couldn\u0027t find the project key in \u0027os.environ\u0027\n    df \u003d executor.query_to_df(query)\n    \n    if df.empty:\n        return f\"Customer {customer_id} not found\"\n\n    row \u003d df.iloc[0]\n    return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"",
+      "code": "import dataiku\nimport pandas as pd\nimport os\n\n# 1. Provide the project key\nos.environ[\"DKU_CURRENT_PROJECT_KEY\"] \u003d \"TEST\"\n\n# 2. Fix the \"InvalidSchema\" by explicitly setting the internal URL and ticket\n# These are standard internal variables that the API node needs to talk to the DSS core\nif \"DKU_BACKEND_URL\" not in os.environ:\n    # This tells the client to use HTTP to talk to the local backend\n    os.environ[\"DKU_BACKEND_URL\"] \u003d \"http://127.0.0.1:50399\" \n\n# Initialize your dataset\ndataset \u003d dataiku.Dataset(\"shopping_behavior_involveRH\", project_key\u003d\"TEST\")\n\ndef api_py_function(customer_id):\n    \"\"\"\n    Retrieves data from the DB and returns it in a custom format.\n    \"\"\"\n    # Use the SQLExecutor\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # Technical table name\n    table_name \u003d \"node_d40e9b1c_TEST_shopping_behavior_involverh\"\n    \n    # MySQL query format\n    query \u003d f\"SELECT * FROM {table_name} WHERE `Customer ID` \u003d \u0027{customer_id}\u0027\"\n    \n    # The \u0027query_to_df\u0027 call will now use the http schema defined above\n    df \u003d executor.query_to_df(query)\n    \n    if df.empty:\n        return f\"Customer {customer_id} not found\"\n\n    row \u003d df.iloc[0]\n    return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"",
       "id": "get-customer-details-python",
       "type": "PY_FUNCTION",
       "tags": [],
@@ -70,7 +70,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:Hmt25r6GGwyYTKF4+R0aPIxgnlk7EnwsTYz3+V19JRauk3u4ghu/KOfQo/sHCre9LnEZPTRgodIuOGIgjRv7CYWAhmKmQDNFXCtoWWfTG8o\u003d",
+        "key": "e:AES:X2:DLmfQl7alb/WgAY/5RVKE5CPaTYjhuTKyNz8ctIyhVDGadJBtTvPazFimouLufGxk8wg/pwXwhKu/D+NWz5GE8ANMX/RX+MZ6WI0fMUCPOk\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -78,7 +78,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:r/z/RTOE6F8I4+z6OeLiXEHO5zFLzxYdqSKQi+yOunomfd5Tr+QLr7A6TQWwqW1skeaxM2PRo9cVmfxz9FHE6Pf+SyWZGw0GV1VZVDFSUVs\u003d",
+        "key": "e:AES:X2:LUDbvn9r+oNHxvbwq5sN5oCallT7XV79ViaiB4B/XPrvXs+Xqd6XertHrSHbWlYUEdANdFKOhPhoxdwAdMRtKzK6wNNm8pnO9XFEddkrgp0\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
