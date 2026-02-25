@@ -51,7 +51,7 @@
       ],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "import dataiku\nimport pandas as pd\n\n# 1. Get the current project handle or specify the key\nclient \u003d dataiku.api_client()\n# If this code is in the same project as the dataset:\nproject_key \u003d dataiku.default_project_key() \n\n# 2. Pass the project_key to the Dataset constructor\ndataset \u003d dataiku.Dataset(\"node_d40e9b1c_TEST_shopping_behavior_involverh\", project\u003dproject_key)\n\ndef api_py_function(customer_id):\n    \"\"\"\n    Retrieves data from the DB and returns it in a custom format.\n    \"\"\"\n    # Use the SQL executor linked to the dataset\u0027s connection\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # Using parameterized queries (or careful f-strings)\n    # Ensure customer_id is treated as a string to prevent injection\n    query \u003d f\u0027SELECT * FROM \"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\" WHERE \"Customer ID\" \u003d \\\u0027{customer_id}\\\u0027\u0027\n    \n    try:\n        df \u003d executor.query_to_df(query)\n        \n        if df.empty:\n            return {\"status\": \"error\", \"message\": f\"Customer {customer_id} not found\"}\n\n        row \u003d df.iloc[0]\n        # Example output\n        return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"\n    \n    except Exception as e:\n        return {\"status\": \"error\", \"message\": str(e)}",
+      "code": "import dataiku\nimport pandas as pd\n\n\n# If this code is in the same project as the dataset:\nproject_key \u003d TEST\n\n# 2. Pass the project_key to the Dataset constructor\ndataset \u003d dataiku.Dataset(\"node_d40e9b1c_TEST_shopping_behavior_involverh\", project\u003dproject_key)\n\ndef api_py_function(customer_id):\n    \"\"\"\n    Retrieves data from the DB and returns it in a custom format.\n    \"\"\"\n    # Use the SQL executor linked to the dataset\u0027s connection\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # Using parameterized queries (or careful f-strings)\n    # Ensure customer_id is treated as a string to prevent injection\n    query \u003d f\u0027SELECT * FROM \"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\" WHERE \"Customer ID\" \u003d \\\u0027{customer_id}\\\u0027\u0027\n    \n    try:\n        df \u003d executor.query_to_df(query)\n        \n        if df.empty:\n            return {\"status\": \"error\", \"message\": f\"Customer {customer_id} not found\"}\n\n        row \u003d df.iloc[0]\n        # Example output\n        return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"\n    \n    except Exception as e:\n        return {\"status\": \"error\", \"message\": str(e)}",
       "id": "get-customer-details-python",
       "type": "PY_FUNCTION",
       "tags": [],
@@ -70,7 +70,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:2LStSoXymsXBRhAlPM5A5+FFBGT1VNdwPvucxkCYfwZHr0l6tO+QWW87PpUFdZG+wyijyn8iRGE6uFgk2m0CeuqJzQhRt1g7PRMhoCfLMis\u003d",
+        "key": "e:AES:X2:LRu0VZCOgAg9j53/MBfgFxKGQ+6b+LJxe047MPej60fuqQqnFSyxlVSb2gmSvHqp+DVPUsGjlN9bunkJ2PNS57LkEskb/9ajNpcbxo/hZ4A\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -78,7 +78,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:Fy4K2kibZRsi4Lik2uf73dVo3iSiKMtyNqR5RwvAB2ejyx1J8fVoqSgi3QFwGG7RH0NY13VlHVD/Wmz2OhCNwShGHPiMl+BNY5jdyUk5j+o\u003d",
+        "key": "e:AES:X2:iEnxMOtgy1859Aiy1Og1WmaRew2hs2Jpv1BsDbrx/LpwfEA9XoNotc/YU8Sug/lQOQvVzAuPVvs3B8bzMuPttyw8VzLpqNTtLTeo54bvCIs\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
