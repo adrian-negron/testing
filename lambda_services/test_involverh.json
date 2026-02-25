@@ -51,7 +51,7 @@
       ],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "import dataiku\nimport pandas as pd\n\n# Define the dataset once at the top\n# This pulls from project \u0027TEST\u0027 and dataset \u0027shopping_behavior_involveRH\u0027\ndataset \u003d dataiku.Dataset(\"shopping_behavior_involveRH\", project_key\u003d\"TEST\")\n\ndef api_py_function(customer_id):\n    # 1. Load the dataset into a pandas dataframe\n    df \u003d dataset.get_dataframe()\n    \n    # 2. Filter for the customer_id\n    # Note: \u0027Customer ID\u0027 is usually an int or string depending on your schema\n    # We convert to string to ensure a match with your input\n    result \u003d df[df[\u0027Customer ID\u0027].astype(str) \u003d\u003d str(customer_id)]\n    \n    # 3. Check if we found anything\n    if result.empty:\n        return f\"Customer {customer_id} not found\"\n    \n    # 4. Return your custom string\n    row \u003d result.iloc[0]\n    return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"",
+      "code": "import dataiku\nimport pandas as pd\n\ndef api_py_function(customer_id):\n    # 1. Get the connection details for your dataset\n    # This stays entirely local to the function\n    dataset \u003d dataiku.Dataset(\"shopping_behavior_involveRH\", project_key\u003d\"TEST\")\n    \n    # 2. Get a \u0027local\u0027 SQL executor for this dataset\n    executor \u003d dataiku.SQLExecutor2(dataset\u003ddataset)\n    \n    # 3. Use the technical table name from your MySQL\n    table_name \u003d \"node_d40e9b1c_TEST_shopping_behavior_involverh\"\n    query \u003d f\"SELECT * FROM {table_name} WHERE `Customer ID` \u003d \u0027{customer_id}\u0027\"\n    \n    # 4. Use the Dataiku internal \u0027query_to_iter\u0027 which is more robust in API nodes\n    # than query_to_df, or just wrap the DF call in a tiny URL fix:\n    import os\n    if \"DKU_BACKEND_URL\" in os.environ and not os.environ[\"DKU_BACKEND_URL\"].startswith(\"http\"):\n        os.environ[\"DKU_BACKEND_URL\"] \u003d \"http://\" + os.environ[\"DKU_BACKEND_URL\"]\n    \n    df \u003d executor.query_to_df(query)\n\n    if df.empty:\n        return f\"Customer {customer_id} not found\"\n\n    row \u003d df.iloc[0]\n    return f\"{row[\u0027Customer ID\u0027]}|{row[\u0027Age\u0027]}|{row[\u0027Item Purchased\u0027]}|{row[\u0027Purchase Amount (USD)\u0027]}\"",
       "id": "get-customer-details-python",
       "type": "PY_FUNCTION",
       "tags": [],
@@ -70,7 +70,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:lJnaYzRAEBXF4a9586Fbe97AM+Ciean4GRvp9gcChOfG7ph3AyfGV6Bbw6fNnYx0niNRExRbtj3MnJYvleYlF8f+XSTCAo3BZQM1t5nd/T0\u003d",
+        "key": "e:AES:X2:blB7QU3SxNQNYHsX9Qd5qOS+ii8B/lcBBym+TUPa63ppl1cnVYvGSkPhM2zPLIaKHkDN3HOA5OWYluvdZjxjX6iiOv8VvoAS21JpDg2U+Gk\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -78,7 +78,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:PdRVzFkDf2zmdE7FEdE7mkXk0M7JBwPf6HNr1tZlwcwvOHZCx5zOaWSllfFL/GptQkqjrvmRfZWAVF8P1/loB5+kBdFzQW7NdQLuDU6EvOA\u003d",
+        "key": "e:AES:X2:0i0eTbTvCOulrcf+Tt+f/QqeA713Ueu/mql+F9yt0j9dTkdpACN29rRxGyn7wb4Ixziwa7t34B0goUXXUPp4P2EfAfpOjbvNz3sev/eeFG0\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
