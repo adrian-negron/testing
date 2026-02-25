@@ -7,7 +7,7 @@
       "queries": [
         {
           "inputParameters": [],
-          "query": "-- Insert your SQL code here\nSELECT * FROM node_d40e9b1c_TEST_shopping_behavior_involverh_copy WHERE \"Customer ID\" \u003d {{customer_id}}",
+          "query": "-- Insert your SQL code here\n\nSELECT * FROM node_d40e9b1c_TEST_shopping_behavior_involverh_copy WHERE `Customer ID` \u003d {{customer_id}}\n",
           "postCommit": false,
           "maxResults": -1
         }
@@ -16,7 +16,7 @@
         {
           "name": "Query #1",
           "q": {
-            "Customer ID": "1"
+            "customer_id": "1"
           }
         }
       ],
@@ -59,7 +59,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:k4MDm3sn2mD/Fq/UbvxNSFhGy9tHUEjBMRjJqpj0Rx5cPyYbkLTNevXop73tgskNkCIJKc2Vt2o/Zf6kBmuvFQCVv1akuiqe8EWbmaeTIao\u003d",
+        "key": "e:AES:X2:jDCmjL6KB+HpyfVIKWs24BgRx3vTRP/j3F4Pzqg8unMGEmGXA8sVg9z36yoy8qS2hUhr3QADYCOjkGrxXtrNMsvSP22UDO/+AK9lrkk2LMA\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
