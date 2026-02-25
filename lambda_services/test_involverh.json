@@ -16,7 +16,7 @@
         {
           "name": "Query #1",
           "q": {
-            "customer_id": "1"
+            "parameter1": "1"
           }
         }
       ],
@@ -66,7 +66,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:2yRiBzJcw+Gtcwo8kKzsbFjkNOJcPzGm7wq36S7hoQPmxXMrFKqL6LJRqT22vAqwRDyV1lr3p7ZYS+CtS6Cp5+ayfpjNp+2x72PKKpCi2Fs\u003d",
+        "key": "e:AES:X2:ZA/z6OZqFwOkZ/g8fZlAR5bBJclwnKyeiWGKzbwYJGmxJhj4+++MvEUu+SA5oe/jM+NLt4HmU9p9/Q6JTBKH++V81gACMSDMBvn3iE02VsI\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
