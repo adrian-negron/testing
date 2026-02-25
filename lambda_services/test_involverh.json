@@ -6,7 +6,11 @@
       "connection": "api-node-referenced-data",
       "queries": [
         {
-          "inputParameters": [],
+          "inputParameters": [
+            {
+              "name": "customer_id"
+            }
+          ],
           "query": "SELECT * FROM \"node-d40e9b1c_shopping_behavior_involverh_copy_TEST\" WHERE \"Customer ID\" \u003d ?;\n\nParameter names:\n    * \"customer_id\"",
           "postCommit": false,
           "maxResults": -1
@@ -66,7 +70,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:t7xjFbGC05TTccsJ3/lcPOSEBt21M7jTNQqmSHJjzATTgn85tR+t0DF8qo2Eo5kY0/3J+R6dh8Xmb1Vc/MgkgC9XKaVcFLG0+vUI6JPZdNs\u003d",
+        "key": "e:AES:X2:OoKdIpSU3FrGGQ/c/JUciLmhsJhGRqasAy6XtIRGJR0zHbfbItvtJQmqu1FTmthKuuuy2P8Z2wI88ZxNZxACw0Yf+608SFr6nGZLrUn8y+8\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
