@@ -116,7 +116,7 @@
       {"name":"Category","type":"string"},
       {"name":"Purchase Amount (USD)","type":"string"},
       {"name":"Location","type":"string"},
-      {"name":"Size","type":"string"},
+      {"name":"Size","type":"string","meaning":"Measure"},
       {"name":"Color","type":"string"},
       {"name":"Season","type":"string"},
       {"name":"Review Rating","type":"string"},
