@@ -76,6 +76,20 @@
         "enabled": false,
         "isManual": true
       }
+    },
+    {
+      "testQueries": [],
+      "lookups": [],
+      "id": "test-lookup",
+      "type": "DATASETS_LOOKUP",
+      "tags": [],
+      "openAPI": {
+        "title": "test-lookup",
+        "content": "{\n  \"paths\" : {\n    \"/test-lookup/lookup\" : {\n      \"post\" : {\n        \"summary\" : \"test-lookup endpoint\",\n        \"description\" : \"Describe what the endpoint call does, what input it takes, what it returns ...\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"name\" : \"serviceInputPayload\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/test-lookup_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/test-lookup_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/test-lookup_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"test-lookup_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"data\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"stringPropExample\" : {\n              \"type\" : \"string\"\n            },\n            \"intPropExample\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"doublePropExample\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"boolPropExample\" : {\n              \"type\" : \"boolean\"\n            },\n            \"floatPropExample\" : {\n              \"type\" : \"number\",\n              \"format\" : \"float\"\n            }\n          }\n        }\n      }\n    },\n    \"test-lookup_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"OutputPropExample\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"test-lookup_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
+        "description": "",
+        "enabled": false,
+        "isManual": true
+      }
     }
   ],
   "authMethod": "API_KEYS",
@@ -84,7 +98,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:7H2/PwQqfn1vhecrR29tYQSqn0MQQBpR+iGg7JWd0oYWeP3ewQBojCojhEBatzaOz7A0Cf++bnsrkWRghFTFetkPWTFqAgSUQrzN9OA5plY\u003d",
+        "key": "e:AES:X2:DDj5VM9K+SEfE2XPjb8wHwEKPwO+UxH0fuZHsgMSm+wpxjS3fsp/xlyqQ0nW7/uQ5hgyAzKEAYarvOx3LGVW3apWeITms2J6iafs1hZM4dk\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -92,7 +106,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:bou4v/iDu2BmTSyyz8ouFFWKUI/4ePAW/CM6iJwPIhqIeVcdYIQFGumLYUyxORLbG3ZxGXxbkn25sXZhESMqns9MdtKhaESoJzY+p8xrDmo\u003d",
+        "key": "e:AES:X2:s7t6mh1639xNxV7RFhAe+OuYYx6Fzek2+ma6zWfL0yQYp5RKtUOTSo3cGbMQJnkiaWDH1cwGayo2ZAgwgaf+lOGAoaxxZ1+P1ftH8tn+0/4\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
