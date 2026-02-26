@@ -79,7 +79,41 @@
     },
     {
       "testQueries": [],
-      "lookups": [],
+      "lookups": [
+        {
+          "datasetRef": "final_mysql_recipe",
+          "packagingType": "BUNDLED_TOCONNECTION",
+          "on": [
+            {
+              "inputLookupKey": null,
+              "resourceLookupCol": "Customer ID"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "Customer ID": "Customer ID",
+            "Age": "Age",
+            "Gender": "Gender",
+            "Item Purchased": "Item Purchased",
+            "Category": "Category",
+            "Purchase Amount (USD)": "Purchase Amount (USD)",
+            "Location": "Location",
+            "Size": "Size",
+            "Color": "Color",
+            "Season": "Season",
+            "Review Rating": "Review Rating",
+            "Subscription Status": "Subscription Status",
+            "Shipping Type": "Shipping Type",
+            "Discount Applied": "Discount Applied",
+            "Promo Code Used": "Promo Code Used",
+            "Previous Purchases": "Previous Purchases",
+            "Payment Method": "Payment Method",
+            "Frequency of Purchases": "Frequency of Purchases"
+          }
+        }
+      ],
       "id": "test-lookup",
       "type": "DATASETS_LOOKUP",
       "tags": [],
@@ -98,7 +132,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:DDj5VM9K+SEfE2XPjb8wHwEKPwO+UxH0fuZHsgMSm+wpxjS3fsp/xlyqQ0nW7/uQ5hgyAzKEAYarvOx3LGVW3apWeITms2J6iafs1hZM4dk\u003d",
+        "key": "e:AES:X2:dYADaWhKzpfzT9nGLreKs2yXy8a3B7hSmGTR++K/DzGgIkjzclcx5EF/AA7Fb9O9J0H/cW24ofK3M6nMP4CkrL2GDPQEWr3UKYoCHDAxGJc\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -106,7 +140,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:s7t6mh1639xNxV7RFhAe+OuYYx6Fzek2+ma6zWfL0yQYp5RKtUOTSo3cGbMQJnkiaWDH1cwGayo2ZAgwgaf+lOGAoaxxZ1+P1ftH8tn+0/4\u003d",
+        "key": "e:AES:X2:9J7J+tAR9ELnPdJVxD7mDGlB9vnTSpxAMjCY6SVzzegQ3jINepytr8VHDuvzFB3svgACnh2Cz2MlbyAVW9coSE1TDVE0nzV6ohXUrKk47Ng\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
