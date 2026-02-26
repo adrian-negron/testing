@@ -65,20 +65,6 @@
     },
     {
       "testQueries": [],
-      "lookups": [],
-      "id": "test-customer",
-      "type": "DATASETS_LOOKUP",
-      "tags": [],
-      "openAPI": {
-        "title": "test-customer",
-        "content": "{\n  \"paths\" : {\n    \"/test-customer/lookup\" : {\n      \"post\" : {\n        \"summary\" : \"test-customer endpoint\",\n        \"description\" : \"Describe what the endpoint call does, what input it takes, what it returns ...\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"name\" : \"serviceInputPayload\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/test-customer_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/test-customer_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/test-customer_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"test-customer_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"data\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"stringPropExample\" : {\n              \"type\" : \"string\"\n            },\n            \"intPropExample\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"doublePropExample\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"boolPropExample\" : {\n              \"type\" : \"boolean\"\n            },\n            \"floatPropExample\" : {\n              \"type\" : \"number\",\n              \"format\" : \"float\"\n            }\n          }\n        }\n      }\n    },\n    \"test-customer_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"OutputPropExample\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"test-customer_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
-        "description": "",
-        "enabled": false,
-        "isManual": true
-      }
-    },
-    {
-      "testQueries": [],
       "lookups": [
         {
           "datasetRef": "final_mysql_recipe",
@@ -132,7 +118,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:dYADaWhKzpfzT9nGLreKs2yXy8a3B7hSmGTR++K/DzGgIkjzclcx5EF/AA7Fb9O9J0H/cW24ofK3M6nMP4CkrL2GDPQEWr3UKYoCHDAxGJc\u003d",
+        "key": "e:AES:X2:WKj0T7mAluMfw68uKXnBeGnfmKALpIh2avbAoe2R1I0GAZMSYKP/713RQRljyTtd23PoemOrEkWiKr7QuGArqKoUCw7fqyS66LWQi3clZAQ\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -140,7 +126,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:9J7J+tAR9ELnPdJVxD7mDGlB9vnTSpxAMjCY6SVzzegQ3jINepytr8VHDuvzFB3svgACnh2Cz2MlbyAVW9coSE1TDVE0nzV6ohXUrKk47Ng\u003d",
+        "key": "e:AES:X2:Oq4euyyOdiBAqjhBy0Bh3lpm+6vA2gXYxG5l0lGvneGwmCW6Ilb2hZtCO99Sn01CfhArUo+Tf/F9DcaBHIR/VFdQb6+JFP72Ldidznl4t+I\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
