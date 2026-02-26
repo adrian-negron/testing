@@ -1,0 +1,70 @@
+{
+  "type": "extract_content",
+  "neverRecomputeExistingPartitions": false,
+  "params": {
+    "extractionMode": "MANAGED_TEXT_ONLY",
+    "defaultImageHandlingMode": "IGNORE",
+    "rules": [],
+    "allOtherRule": {
+      "actionToPerform": "DONOTEXTRACT",
+      "structuredSettings": {
+        "splitUnit": "SECTION",
+        "maxSectionDepth": 6,
+        "imageHandlingMode": "IGNORE",
+        "ocrEngine": "AUTO",
+        "ocrLanguages": "en",
+        "llmId": "",
+        "useCustomVLMPrompt": false,
+        "customVLMPrompt": "You are analyzing a document image to extract structured information for downstream processing and retrieval (RAG). Your goal is to extract all meaningful, reusable content in a markdown format up to 3000 characters.\nInstructions:\n1. Classify the image type: diagram, chart, table, handwriting, printed text, or mixed.\n2. Extract and describe based on type:\n- Diagram or Chart: Provide a detailed description of the structure, relationships, labels, axes, values, legends, and overall meaning. Convert all meaningful content into text. Summarize insights if relevant.\n- Handwritten or Printed Text: Transcribe all visible text accurately. Preserve formatting and structure. Use markdown headings, bullets, or code blocks as appropriate.\n- Tables: Reconstruct the table as markdown. Ensure all rows and columns are preserved. Retain headings and numerical precision.\n- Mixed Content: Separate and extract each part individually (e.g., transcribe text, describe chart, and format table).\n3. Preserve structure and context: Use markdown to reflect hierarchy, formatting, and clarity.\n4. Avoid assumptions or hallucinations. If any part is unclear, describe it as such.\n5. Ensure each section is a reusable, standalone chunk.\nIf the image is a logo, signature, or QR code, don\u0027t describe it and return an empty string.\n",
+        "enableImageClassificationFiltering": true
+      },
+      "splittingSettings": {
+        "chunkSizeCharacters": 3000,
+        "chunkOverlapCharacters": 120
+      },
+      "storeInMultimodalColumn": "FULL_CONTENT",
+      "reExtractUnmodifiedDocuments": false
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "hashPropagationBehavior": "INHERIT",
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "At7Xsg6y",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "images_extracted_content",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "adrian.negron@dataiku.com"
+    },
+    "lastModifiedOn": 1772121956676
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
