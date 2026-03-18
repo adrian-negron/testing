@@ -1,7 +1,3 @@
 {
-  "typeBadges": {
-    "LLM": [
-      "RECIPE:compute_images_extracted_content"
-    ]
-  }
+  "typeBadges": {}
 }
