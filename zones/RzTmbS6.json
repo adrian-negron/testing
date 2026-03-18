@@ -1,7 +1,44 @@
 {
   "name": "OCR Demo",
   "color": "#C82423",
-  "items": [],
+  "items": [
+    {
+      "objectId": "compute_image_processing_post_greyscale",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "sXo9YcW9",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_test-image-extraction-spanish",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_test-spa-tessereact",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test-image-extraction-spanish",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "test-spa-tessereact",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_sXo9YcW9",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "At7Xsg6y",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "image_processing_post_greyscale",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
