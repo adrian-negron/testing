@@ -3,7 +3,8 @@
   "neverRecomputeExistingPartitions": false,
   "params": {
     "envSelection": {
-      "envMode": "INHERIT"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "test-py"
     },
     "sparkConfig": {
       "inheritConf": "spark-XS-2-workers-of-1-CPU-3Gb-Ram",
