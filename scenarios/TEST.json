@@ -2,13 +2,6 @@
   "type": "step_based",
   "name": "test",
   "active": false,
-  "creationTag": {
-    "versionNumber": 0,
-    "lastModifiedBy": {
-      "login": "adrian.negron@dataiku.com"
-    },
-    "lastModifiedOn": 1772041011230
-  },
   "checklists": {
     "checklists": []
   },
@@ -19,11 +12,29 @@
   },
   "tags": [],
   "triggers": [],
-  "reporters": [],
+  "reporters": [
+    {
+      "active": true,
+      "messaging": {
+        "type": "msft-teams-scenario",
+        "configuration": {
+          "message": "${if(outcome \u003d\u003d \u0027SUCCESS\u0027, \u0027✅\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027FAILED\u0027, \u0027🔴\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027WARNING\u0027, \u0027🔶\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027\u0027 || outcome \u003d\u003d \u0027N/A\u0027, \u0027🔔\u0027, \u0027\u0027)} DSS Scenario [${scenarioName}](${scenarioRunURL}) triggered by ${triggerName}: **${outcome}**",
+          "webhookUrl": "https://default46de9a18f82649eaae0761dd0f86f4.ba.environment.api.powerplatform.com/powerautomate/automations/direct/workflows/8db58db98075425ba5429fdc382bf1fe/triggers/manual/paths/invoke?api-version\u003d1\u0026sp\u003d%2Ftriggers%2Fmanual%2Frun\u0026sv\u003d1.0\u0026sig\u003dm3kCVqdlkNkhfu11oYZbgCq0P9uH86iHjvy9ckTjZIE",
+          "webhookType": "WORKFLOWS",
+          "useProxy": true
+        }
+      },
+      "id": "5yhR2o6k",
+      "runConditionEnabled": true,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    }
+  ],
   "params": {
     "steps": []
   },
   "automationLocal": false,
   "customFields": {},
-  "markedAsTest": false
+  "markedAsTest": false,
+  "__dku_object_version__": 1
 }
