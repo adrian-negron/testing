@@ -27,7 +27,7 @@
       },
       "id": "bHJNpDBt",
       "name": "test",
-      "runConditionEnabled": true,
+      "runConditionEnabled": false,
       "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
       "phase": "END"
     }
