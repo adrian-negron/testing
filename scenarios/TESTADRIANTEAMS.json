@@ -43,6 +43,37 @@
             }
           }
         }
+      },
+      {
+        "id": "build_0_true_d_shopping_behavior_updated_FINAL",
+        "type": "build_flowitem",
+        "name": "Step #2",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "shopping_behavior_updated_FINAL",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "autoUpdateSchemaBeforeEachRecipeRun": false,
+          "stopAtFlowZoneBoundary": false,
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
       }
     ]
   },
