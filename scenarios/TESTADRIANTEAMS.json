@@ -81,7 +81,7 @@
           "builds": [
             {
               "type": "DATASET",
-              "itemId": "shopping_behavior_updated_FINAL",
+              "itemId": "test_Teams-scenario",
               "partitionsSpec": ""
             }
           ],
