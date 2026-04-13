@@ -8,18 +8,10 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:MwVzOLmcam4ZCTKN8U1M6l8pscUugSKz26K9daqr01tWHd/q0kXjuLkjZ5PXEiRf0zIvyrQ3/8HIfFS/BsvAhmEKRHzruYjyx2FGIEMQuuI\u003d",
+        "key": "e:AES:X2:Nx/d5e3coDZtHvzMHzMDXFlwiPry5cXXOyoxnXfhWJ+nYD3tqEsER43tKJAEZqmRDOZengv6z1cJ87Y0YhFUSCCx83LAouy6E3ru4YRr4M8\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1776104703364,
-        "createdBy": "adrian.negron@dataiku.com"
-      },
-      {
-        "id": null,
-        "key": "e:AES:X2:FERPfq2xY3yz8LYk2N8KoZ4k30ivzWTQ1i+av2HgXWQz/QMGaX5HlM2SbDm5e+/pilDA2dB9+rliq6tDa47BzlknCg4RTZpE7KEOGQhSfAw\u003d",
-        "label": "test",
-        "description": null,
-        "createdOn": 1776104838026,
         "createdBy": "adrian.negron@dataiku.com"
       }
     ]
