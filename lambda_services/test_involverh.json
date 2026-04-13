@@ -118,7 +118,7 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:w7iAIJiFoZaEU60oHubDnkGjRkQVuSj1R4fjHl081+Z4kqaw7oKaV8Bu2VkurIXRrtOthavCIH/uHn+cKyi5lYvPobbunidZb5i4dGU7F70\u003d",
+        "key": "e:AES:X2:Wcp/MnxNn88qQ48rOoY5h+t9N2yuRGPFi3VhaZstl5w2iKLK5HpySMmYe1ls9vilRaU7VCtqQFxb+YZsyWNAtDnQ/Usl9bpRSEJvksvGVFk\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1772034835286,
@@ -126,7 +126,7 @@
       },
       {
         "id": null,
-        "key": "e:AES:X2:xZPfxmC+X9ppP2BFpNMdOtmXakr15ka91j4p1LgpkNOheGx1s/w7G8ezW06vhWCL8C7uqcFga92UPDbp/sCcXqJ9SEnAPqnWWi8+eM8mwUc\u003d",
+        "key": "e:AES:X2:6D00qOp5kCrsWCKwN9j3VJOyNZPz8SzVJYR6yPjXq3mSbgeKytDES5NNHB1EAZ83ZOP6Lt4Ad0gThOPMa7Ifrau04xaZ6Xga8E/g3AoTqA8\u003d",
         "label": "other service",
         "description": null,
         "createdOn": 1772047935154,
