@@ -1,5 +1,5 @@
 {
-  "name": null,
+  "name": "test-tbo",
   "error": null,
   "endpoints": [],
   "authMethod": "API_KEYS",
@@ -8,10 +8,18 @@
     "queryKeys": [
       {
         "id": "DEFAULT_KEY",
-        "key": "e:AES:X2:ZaQ/7VdpR7qPyz34EjpFFtTKqrjXnqr4L9qWTvxLw00A0MOgVQN12jkEJsaqJ+3kTd31IjyROSv6UlmSz8W0e911ANLaMd/ruiF5renaZB0\u003d",
+        "key": "e:AES:X2:MwVzOLmcam4ZCTKN8U1M6l8pscUugSKz26K9daqr01tWHd/q0kXjuLkjZ5PXEiRf0zIvyrQ3/8HIfFS/BsvAhmEKRHzruYjyx2FGIEMQuuI\u003d",
         "label": "Default API key",
         "description": null,
         "createdOn": 1776104703364,
+        "createdBy": "adrian.negron@dataiku.com"
+      },
+      {
+        "id": null,
+        "key": "e:AES:X2:FERPfq2xY3yz8LYk2N8KoZ4k30ivzWTQ1i+av2HgXWQz/QMGaX5HlM2SbDm5e+/pilDA2dB9+rliq6tDa47BzlknCg4RTZpE7KEOGQhSfAw\u003d",
+        "label": "test",
+        "description": null,
+        "createdOn": 1776104838026,
         "createdBy": "adrian.negron@dataiku.com"
       }
     ]
