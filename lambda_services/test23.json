@@ -1,0 +1,39 @@
+{
+  "name": null,
+  "error": null,
+  "endpoints": [],
+  "authMethod": "API_KEYS",
+  "authRealm": {
+    "id": null,
+    "queryKeys": [
+      {
+        "id": "DEFAULT_KEY",
+        "key": "e:AES:X2:twQ0DXLlDeiZaAfqHr+BH0hEP60D5PgdGLHMw9PK7jrOXc/PlMxaDOHXAUMBk6OX2m9AVCn9z73jEPUebq3JJ1HGVqwzTupp97z2nfcWO0M\u003d",
+        "label": "Default API key",
+        "description": null,
+        "createdOn": 1776105557976,
+        "createdBy": "adrian.negron@dataiku.com"
+      }
+    ]
+  },
+  "oauth2Config": null,
+  "deploymentMonitoring": [],
+  "typeBadges": {},
+  "releaseNotes": null,
+  "versionTag": null,
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "adrian.negron@dataiku.com"
+    },
+    "lastModifiedOn": 1776105557977,
+    "extendedProperties": null
+  },
+  "description": null,
+  "shortDesc": null,
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
